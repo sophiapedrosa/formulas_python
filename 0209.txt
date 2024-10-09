@@ -1,0 +1,529 @@
+02/09
+09/08
+
+___________________________________________________________________
+Menor numero:
+a = int(input('digite o 1o. numero: '))
+b = int(input('digite o 2o numero: '))
+c = int(input('digite o 3o. numero: '))
+
+vmenor = a
+vnum = 1
+
+if b < a and b < c:
+    vmenor = b
+    vnum = 2
+    
+if c < a and c < b:
+    vmenor = c
+    vnum = 3
+
+print(f'O {vnum}.o numero foi o menor informado: {vmenor}')
+
+
+___________________________________________________________________
+desconto salario
+
+vhoraula = float(input('qual o valor da sua hora-aula? '))
+vhoras = float(input('quantas horas trabalhadas por mes? '))
+vdesconto = float(input('em %, quanto de desconto? '))
+
+vbruto = (vhoraula * vhoras) 
+vdesconto = (vdesconto/100) * vbruto
+
+
+print(f'seu salário é R${vbruto}, mas com descontos fica em R${vdesconto}')
+
+____________________________________________________________________
+randint
+
+from random import randint
+from time import sleep
+
+sleep (5) -  cursor vai piscar 5x por 5 segundos
+vsorteio = randint(0,5)
+
+vnum = int(input('descubra qual número o computador irá escolher entre 0 e 5: '))
+
+
+
+if vnum == vsorteio:
+    print('voce venceu!!')
+else:
+    sleep (5)
+    print(f'voce perdeu, o numero que ele pensou foi {vsorteio}')
+____________________________________________________________________
+
+vfuncionario = int(input('quanto tempo tem que trabalha nessa empresa? '))
+
+if vfuncionario < 5:
+    print('voce tera aumento no seu vale refeição!')
+elif vfuncionario >= 5 and vfuncionario <= 10:
+    print('voce terá um reajuste de 10% no salario!')
+elif vfuncionario > 10 and vfuncionario <= 15:
+    print('voce ira a festa de comemoração!')
+else:
+    print('não ira a festa.')
+____________________________________________________________________
+media aluno
+
+vnota = float(input('digite a 1.o nota: '))
+vnota2 = float(input('digite a 2.o nota: '))
+vnota3 = float(input('digite a 3.o nota: '))
+
+vmedia = (vnota+vnota2+vnota3) / 3 
+
+if vmedia >= 6:
+    print('Aluno aprovado!')
+elif vmedia > 3 and vmedia < 6:
+    print('Aluno de recuperação.')
+elif vmedia <= 3:
+    print('Aluno reprovado.')
+    print('não ira a festa.')
+____________________________________________________________________
+print('calculadora de IMC')
+
+vpeso = float(input('digite seu peso: '))
+valtura = float(input('digite sua altura: '))
+
+vimc = vpeso / (valtura**2)
+
+
+if vimc < 18.5:
+    print('Abaixo do peso')
+elif vimc >= 18.5 and vimc <= 24.99:
+    print('peso ideal')
+else:
+    print('acima do peso.')
+__________________________________
+vpeso = float(input('digite seu peso: '))
+valtura = float(input('digite sua altura: '))
+
+vimc = vpeso / (valtura**2)
+
+
+if vimc <= 24.99:
+    print('Peso normal')
+elif vimc < 17:
+    print('Muito abaixo do peso')  
+elif vimc <= 18.49:
+    print('Abaixo do peso')  
+elif vimc <= 29.99:
+    print('Acima do peso')
+elif vimc <= 34.99:
+    print('Obesidade I')
+else:
+    print('Obesidade II')
+____________________________________________________________________
+
+Positivo par, positivo impar, negativo
+
+vnum = int(input('Digite um numero: '))
+
+
+if vnum >= 0:
+    if vnum % 2 == 0:
+        print('numero positivo e par')
+    else:
+        print('numero positivo e impar')
+else:
+    print('numero negativo')
+    
+____________________________________________________________________
+
+while - contar ate 10
+
+vcont = 0
+
+while vcont <= 10:
+    print(vcont)
+    vcont += 1 # incrementa o contador ate 10
+
+____________________________________________________________________
+
+vcont = 0
+
+while vcont <= 10:
+    print(vcont)
+    
+    if vcont == 5: 
+        break
+    
+    vcont += 1    #incrementa o numero inserido 
+____________________________________________________________________
+
+contagem regressiva
+
+vcont = 10
+
+while vcont >= 0:
+    print(vcont)
+    
+    vcont -= 1   #tira do valor inserido ate contar regressivamente
+____________________________________________________________________
+
+saltando
+
+vate = int(input('quer contar ate quanto? '))
+vsalto = int(input('saltando de quanto em quanto: '))
+
+vcont = 0
+
+while vcont <= vate:
+    print(vcont)
+    vcont += vsalto
+
+____________________________________________________________________
+
+ler 5 números e soma-los
+vcont = 0
+vsoma = 0
+while vcont < 5:
+    vnum = int(input('digite um numero: '))
+    vsoma += vnum   #soma os numeros inserido
+    vcont += 1      #incrementa o vcont
+
+print('a soma dos numeros é', vsoma)
+____________________________________________________________________
+nao recebe valor 0 e entrega resultado da divisao
+
+vnum1 = int(input('Digite um valor: '))
+vnum2 = int(input('Digite o segundo valor: '))
+
+while vnum2 == 0:
+    print('o valor não pode ser zero.')
+    vnum2 = int(input('Não aceitamos esse valor, digite outro: '))
+
+
+divisao = vnum1 / vnum2
+
+if vnum2 != 0:
+    print(f'o resultado da divisãoo entre {vnum1} e {vnum2} é: {divisao}')
+____________________________________________________________________
+media de um aluno que só aceita numero de 0 a 10
+
+
+vnota1 = float(input('digite a primeira nota: '))
+vnota2 = float(input('digite a segunda nota: '))
+
+while vnota1 < 0 or vnota1 > 10:
+    print('Não aceitamos esse valor')
+    vnota1 = float(input('digite a primeira nota novamente: '))
+
+while vnota2 < 0 or vnota2 > 10:
+    print('Não aceitamos esse valor')
+    vnota2 = float(input('digite a segunda nota novamente: '))
+
+media = (vnota1 + vnota2)/ 2
+print(f'a media desse aluno é {media}')
+____________________________________________________________________
+sorteio de numero e while true
+
+from random import randint
+
+while True:
+    vsorteio = randint(0,5)
+    	
+    if vpalpite == vsorteio:
+        print('parabens voce acertou')
+    else:
+        print('voce errou')
+
+    vcontinuar = input('deseja tentar novamente <s>im ou <n>ao? ')
+    if vcontinuar.lower() == 'n':
+        break
+    else:
+        print('')
+____________________________________________________________________
+
+vsoma = 0
+
+while True:
+    vnum= int(input('digite um numero: '))
+
+    if vnum == 0:
+        break
+    vsoma += vnum
+
+print(f'a soma dos numeros digitados é {vsoma}')
+
+____________________________________________________________________
+FOR\IN
+
+for vcont in range (0,10):
+    print(F'passo {vcont}')
+print('fim')
+
+
+____________________________________________________________________
+contar até o numero informado:
+
+vnum = int(input('digite um numero: '))
+
+for vnum in range (0,vnum+1):
+    print(vnum)
+print('terminei de contar até seu numero')
+
+OU
+
+vate = int(input('digite um numero: '))
+
+for vcont in range (0,vate+1):
+    print(vcont)
+print('terminei de contar até seu numero')
+
+____________________________________________________________________
+valor inicial, final e seus saltos
+
+vinicio = int(input('digite um numero para começar: '))
+vfim = int(input('digite um numero para terminar: '))
+vpasso = int(input('digite um numero para dar saltos: '))
+
+for vcont in range (vinicio, vfim+1, vpasso):
+    print(vcont)
+
+____________________________________________________________________
+
+informe quatro valores inteiros quaiquer e ao final exiba a soma
+
+vsoma = 0
+
+for vcont in range (0,4):
+    vvalor = int(input(f'digite o {vcont+1}º numero: '))
+    vsoma += vvalor
+    
+print(f'a soma dos numeros é {vsoma}')
+
+____________________________________________________________________
+contagem regressiva 10 ate 0 
+
+from time import sleep
+for vcont in range (10, -1, -1):
+    print(f'{vcont}')
+    sleep(0.5)
+print('bum!!!')
+
+
+for in range (inicio da contagem, final da contagem, salto)
+____________________________________________________________________
+números pares entre 0 e 50
+
+for vcont in range (2, 50, 2):
+    print(vcont)
+    
+print('são todos os valores pares entre 0 e 50')
+
+OU 
+
+for vcont in range (2, 50):
+    if vcont % 2 ==0:
+        print(vcont)
+
+____________________________________________________________________
+tabuada de um numero
+
+vnum = int(input('digite um numero e veja sua tabuada: '))
+
+for vcont in range (1, 11):
+    print(f'{vnum} X {vcont:2} = {vnum*vcont:2}')
+
+____________________________________________________________________
+tabuada + pergunta se quer continuar ou não: 
+
+vnum = int(input('digite um numero e veja sua tabuada: '))
+
+for vcont in range (1, 11):
+    print(f'{vnum} X {vcont:2} = {vnum*vcont:2}')
+    
+    
+vpergunta = input('voce quer continuar? <s> <n> ')
+    
+    if vpergunta == n:
+        quit()
+        
+____________________________________________________________________
+pedir 6 valores e somar os pares
+
+vcontpar = 0
+vsoma = 0
+
+for vcont in range (0,6):
+    vnum = int(input(f"digite o {vcont+1}º valor: "))
+    if vnum % 2 == 0:
+        vsoma += vnum
+        vcontpar += 1
+    
+print(f"voce informou {vcontpar} valore(s) PARES cuja a soma é {vsoma}")
+
+____________________________________________________________________
+"FOR" itera (percorre) cada item de um conjunto de itens:
+ex.:
+for vletra in "python":
+    print(vletra)
+____________________________________________________________________
+variáveis simples:
+vlanches = "hamburguer"
+
+
+variáveis compostas:
+tuplas
+listas
+dicionários
+
+tuplas() - itens acessados por indices
+
+ex.:
+vlanches = ("hamburguer","suco","pizza","pudim")
+print(vlanches)
+print(vlanches[2])
+print(vlanches[0:2])
+print(vlanches[1:])
+
+print(len(vlanches)) = fala a quantidade de itens
+
+itera cada item da tupla
+for comida in vlanches:
+    print(comida)
+_____________________________________________
+vnumeros = (10,20,30,40,50)
+vsoma = 0 
+
+for numeros in vnumeros:
+    vsoma += numeros
+
+print("a soma dos numeros: ",vsoma)
+
+____________________________________________________________________
+sistema de busca de uma tupla
+
+estados = ('sao paulo','rio de janeiro','minas gerais','espirito santo')
+
+vestado_busca = input('digite um estado: ')
+
+if vestado_busca in estados:
+    print(f'{vestado_busca} esta na lista de estados')
+else:
+    print(f'{vestado_busca} nao esta na lista de estados')
+____________________________________________________________________
+ver quantas vezes o numero 1 aparece na tupla    
+
+valores =  (1,2,3,1,4,1,5)
+vocorrencias = 0
+
+for v in valores:
+    if v == 1:
+        vocorrencias += 1 
+
+print('o numero 1 aparece', vocorrencias ,'vezes na tupla.')
+
+
+OU
+
+valores =  (1,2,3,1,4,1,5)
+
+vocorrencias = valores.count(1)
+
+print(f'o numero 1 aparece {vocorrencias} vezes na tupla.')
+
+____________________________________________________________________
+ordenar uma lista sem ferramenta(sort)
+
+lista = [10, 6, 4, 3, 2]
+
+for vcont1 in range(len(lista)):
+  for vcont2 in range(len(lista)):
+    if lista[vcont1] <= lista[vcont2]:
+      temporaria = lista[vcont1]
+      lista[vcont1] = lista[vcont2]
+      lista[vcont2] = temporaria
+
+____________________________________________________________________
+print(lista)
+
+tuplas sao imutaveis, listas não são
+.append() = adiciona item a lista
+.insert() = adicionar um item a uma posição escolhida
+.pop() = elimina um item da lista pelo indice
+.remove() =  remove um item pelo nome
+____________________________________________________________________
+COMANDOS EM LISTAS
+
+vlanches = ['hamburguer', 'suco', 'pizza','pudim']
+
+vlanches.append('sorvete')
+print(vlanches)
+
+vlanches.insert(0,'hotdog')
+print(vlanches)
+
+vlanches.pop()
+print(vlanches)
+
+vlanches.remove('sorvete')
+print(vlanches)
+____________________________________________________________________
+vvalores = list(range(4,8))
+na memoria fica = [4, 5, 6, 7]
+____________________________________________________________________
+valores = [8, 2, 5, 4]
+
+valores.sort() = ordem crescente
+print(valores)
+
+valores.sort(reverse=True) = ordem decrescente
+print(valores)
+
+print(len(valores))
+____________________________________________________________________
+OUTRO JEITO DE DECLARAR LISTAS
+vvalores = []
+
+vvalores.append(6)
+vvalores.append(8)
+vvalores.append(0)
+vvalores.append(10)
+
+for valor in vvalores:
+    print(f'Valor: {valor}')
+    
+for indice, valor in enumerate(vvalores):
+    print(f'na posição {indice} esta o valor: {valor}') = indice mostra em qual posição esta o numero
+____________________________________________________________________
+vvalores = []
+
+for contagem in range(5):
+    vvalores.append(int(input('digite um valor: ')))
+
+print('=='*40)
+    
+for indice, valor in enumerate(vvalores):
+    print(f'na posição {indice} está o valor: {valor}')
+    
+print('=='*40)
+
+usuario = int(input('digite novamente: '))
+
+if usuario in vvalores:
+    print('esse é um valor que esta na lista')
+else:
+    print('não esta na lista')
+
+____________________________________________________________________
+receber uma lista e soma-las
+vvalores = []
+
+for contagem in range(5):
+    pergunta = (int(input('digite um valor: ')))
+    vvalores.append(pergunta)
+
+vsoma = sum(vvalores)
+
+print("a soma dos numeros: ",vsoma)
+
+____________________________________________________________________
+
+
+____________________________________________________________________
+
+
+
